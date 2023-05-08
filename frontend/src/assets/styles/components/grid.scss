@@ -1,0 +1,39 @@
+.MuiDataGrid-root.MuiDataGrid-root {
+  border: 3px solid;
+  border-radius: 0;
+
+  .MuiDataGrid-columnHeaderTitle.MuiDataGrid-columnHeaderTitle {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .MuiDataGrid-columnHeaders.MuiDataGrid-columnHeaders {
+    border-bottom: 3px solid;
+  }
+
+  .MuiDataGrid-footerContainer.MuiDataGrid-footerContainer {
+    border-top: 3px solid;
+  }
+
+  .MuiTablePagination-displayedRows.MuiTablePagination-displayedRows {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .MuiDataGrid-iconSeparator.MuiDataGrid-iconSeparator {
+    color: var(--color-primary) !important;
+  }
+
+  .MuiDataGrid-selectedRowCount.MuiDataGrid-selectedRowCount {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .MuiTablePagination-selectIcon.MuiTablePagination-selectIcon {
+    color: var(--color-primary) !important;
+  }
+
+  .MuiTablePagination-selectLabel.MuiTablePagination-selectLabel {
+    text-transform: uppercase;
+  }
+}

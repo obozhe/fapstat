@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import './components';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 16 16 16; // #101010
+    --color-secondary: 42 175 204; // #2AAFCC
+    --color-error: 164 34 34; //#A42222
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  @apply bg-bg-main text-primary;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  outline-color: rgb(var(--color-secondary) / 1);
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  font-weight: 600;
+  @apply text-xl;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-main;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+.transparent-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgb(var(--color-secondary) / 1);
+}
+
+::selection {
+  background: rgb(var(--color-secondary) / 1);
+}
+
+// ios full width
+input[type='time'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// ios text align
+input::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+input[type='time']::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+input[type='time']::-webkit-datetime-edit-text {
+  padding: 12px 0;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+input[type='time']::-webkit-datetime-edit-hour-field {
+  padding: 12px 8px;
+}
+
+/* Minute */
+input[type='time']::-webkit-datetime-edit-minute-field {
+  padding: 12px 8px;
+}
+
+/* AM/PM */
+input[type='time']::-webkit-datetime-edit-ampm-field {
+  padding: 12px 10px;
+}
+
+a.active {
+  @apply text-secondary;
+
+  @media screen and (min-width: 768px) {
+    @apply text-current;
+    border-bottom: 4px solid black;
+  }
+}
+
+canvas {
+  position: relative;
+  z-index: 1;
+}

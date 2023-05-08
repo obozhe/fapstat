@@ -1,0 +1,28 @@
+{
+  "name": "fapstat",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run dev -w frontend\" \"npm run start:dev -w backend\"",
+    "client": "npm run dev -w frontend",
+    "server": "npm run start:dev -w backend",
+    "build": "npm run build -workspaces",
+    "start": "NODE_ENV=production node build/server/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obozhe/fapstat.git"
+  },
+  "homepage": "https://github.com/obozhe/fapstat#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
+  }
+}

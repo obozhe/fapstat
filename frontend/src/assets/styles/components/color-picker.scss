@@ -1,0 +1,13 @@
+.twitter-picker.twitter-picker {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  > div:nth-child(-n + 2) {
+    display: none !important;
+  }
+
+  input {
+    height: 30px !important;
+  }
+}
